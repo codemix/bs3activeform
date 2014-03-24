@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="en" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/6b087c39/highlight.css" />
+<style type="text/css">
+/*<![CDATA[*/
+    .bs3-docs-sidebar {
+        position: fixed;
+        top: 95px;
+    }
+    .bs3-docs-sidebar .nav>li>a {
+        display: block;
+        font-size: 13px;
+        font-weight: 500;
+        color: #999;
+        padding: 4px 20px;
+    }
+    .bs3-docs-sidebar .nav>.active>a,
+    .bs3-docs-sidebar .nav>.active:hover>a,
+    .bs3-docs-sidebar .nav>.active:focus>a {
+        padding-left: 18px;
+        font-weight: 700;
+        color: #563d7c;
+        background-color: transparent;
+        border-left: 2px solid #563d7c;
+    }
+    .bs3-docs-sidebar .nav>li>a:hover,
+    .bs3-docs-sidebar .nav>li>a:focus {
+        padding-left: 19px;
+        color: #563d7c;
+        text-decoration: none;
+        background-color: transparent;
+        border-left: 1px solid #563d7c;
+    }
+    .bs3-docs-sidebar .nav>.active>a,
+    .bs3-docs-sidebar .nav>.active:hover>a,
+    .bs3-docs-sidebar .nav>.active:focus>a {
+        padding-left: 18px;
+        font-weight: 700;
+        color: #563d7c;
+        background-color: transparent;
+        border-left: 2px solid #563d7c;
+    }
+    .back-to-top {
+        margin-top: 10px;
+        margin-left: 10px;
+        padding: 4px 10px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #999;
+    }
+    .back-to-top:hover {
+        text-decoration: none;
+        color: #563d7c;
+    }
+
+/*]]>*/
+</style>
+<title>demo - Default</title>
+</head>
+
+<body data-spy="scroll" data-target=".bs3-docs-sidebar">
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="https://github.com/codemix/bs3activeform">Codemix\BS3ActiveForm</a>            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav" id="yw3">
+<li><a href="index.html">Overview</a></li>
+<li class="active"><a href="default.html">Default Layout</a></li>
+<li><a href="horizontal.html">Horizontal Layout</a></li>
+<li><a href="inline.html">Inline Layout</a></li>
+</ul>            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        
+        <div class="row">
+    <div class="col-md-2">
+        <div class="bs3-docs-sidebar">
+                <ul class="nav" id="yw0">
+<li><a href="#default-options">Default Options</a></li>
+<li><a href="#help-text">Help Text</a></li>
+<li><a href="#placeholder">Placeholder</a></li>
+<li><a href="#disabled-label">Disabled Label</a></li>
+<li><a href="#column-sizing">Column Sizing</a></li>
+<li><a href="#list-controls">List Controls</a></li>
+<li><a href="#inline-lists">Inline Lists</a></li>
+<li><a href="#custom-inputs">Custom Inputs</a></li>
+</ul>    <a href="#top" class="back-to-top">Back to top</a>
+        </div>
+    </div>
+    <div class="col-md-10">
+        
+
+<h1>Examples: Default Layout</h1>
+
+<p>
+    If no <code>layout</code> is specified on the form object (or if it's set to <code>default</code>)
+    then a stacked form is created.
+</p>
+
+<div class="hl-code"><div class="php-hl-main"><pre><span class="php-hl-inlinetags">&lt;?php</span> <span class="php-hl-var">$form</span><span class="php-hl-code"> = </span><span class="php-hl-var">$this</span><span class="php-hl-code">-&gt;</span><span class="php-hl-identifier">beginWidget</span><span class="php-hl-brackets">(</span><span class="php-hl-quotes">'</span><span class="php-hl-string">Codemix\BS3ActiveForm</span><span class="php-hl-quotes">'</span><span class="php-hl-brackets">)</span><span class="php-hl-code">; </span><span class="php-hl-inlinetags">?&gt;</span></pre></div></div>
+
+<p>
+    Following is a list of the most common form elements to exemplify different options and validation states.
+</p>
+
+<form role="form" id="yw1" action="default" method="post.html">
+    <hr>
+
+    <h2 id="default-options">Default Options</h2>
+    <div class="row">
+        <div class="col-md-6">
+                                <div class="form-group"><label class="control-label">Demolabel</label>
+<input class="form-control" name="BS3ActiveFormDemoModel[demo]" id="BS3ActiveFormDemoModel_demo" type="text" />
+
+</div>                <p>Error state:</p>
+                                <div class="form-group has-error"><label class="control-label">Demolabel</label>
+<input class="form-control error" name="BS3ActiveFormDemoModel[demo]" id="BS3ActiveFormDemoModel_demo" type="text" />
+<p class="help-block">Demolabel cannot be blank.</p>
+</div>        </div>
+        <div class="col-md-6">
+            <div class="hl-code"><div class="php-hl-main"><pre><span class="php-hl-inlinetags">&lt;?=</span> <span class="php-hl-var">$form</span><span class="php-hl-code">-&gt;</span><span class="php-hl-identifier">group</span><span class="php-hl-brackets">(</span><span class="php-hl-quotes">'</span><span class="php-hl-string">textField</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,</span><span class="php-hl-var">$model</span><span class="php-hl-code">, </span><span class="php-hl-quotes">'</span><span class="php-hl-string">demo</span><span class="php-hl-quotes">'</span><span class="php-hl-brackets">)</span> <span class="php-hl-inlinetags">?&gt;</span></pre></div></div>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2 id="help-text">Help Text</h2>
+    <div class="row">
+        <div class="col-md-6">
+                                <div class="form-group"><label class="control-label">Demolabel</label>
+<input class="form-control" name="BS3ActiveFormDemoModel[demo]" id="BS3ActiveFormDemoModel_demo" type="text" />
+
+<p class="help-block">Help text</p></div>                <p>Error state:</p>
+                                <div class="form-group has-error"><label class="control-label">Demolabel</label>
+<input class="form-control error" name="BS3ActiveFormDemoModel[demo]" id="BS3ActiveFormDemoModel_demo" type="text" />
+<p class="help-block">Demolabel cannot be blank.</p>
+<p class="help-block">Help text</p></div>        </div>
+        <div class="col-md-6">
+            <div class="hl-code"><div class="php-hl-main"><pre><span class="php-hl-inlinetags">&lt;?=</span> <span class="php-hl-var">$form</span><span class="php-hl-code">-&gt;</span><span class="php-hl-identifier">group</span><span class="php-hl-brackets">(</span><span class="php-hl-quotes">'</span><span class="php-hl-string">textField</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,</span><span class="php-hl-var">$model</span><span class="php-hl-code">, </span><span class="php-hl-quotes">'</span><span class="php-hl-string">demo</span><span class="php-hl-quotes">'</span><span class="php-hl-code">, </span><span class="php-hl-reserved">array</span><span class="php-hl-brackets">(</span>
+    <span class="php-hl-quotes">'</span><span class="php-hl-string">helpText</span><span class="php-hl-quotes">'</span><span class="php-hl-code"> =&gt; </span><span class="php-hl-quotes">'</span><span class="php-hl-string">Help text</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,
+</span><span class="php-hl-brackets">)</span><span class="php-hl-brackets">)</span> <span class="php-hl-inlinetags">?&gt;</span></pre></div></div>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2 id="placeholder">Placeholder</h2>
+    <div class="row">
+        <div class="col-md-6">
+                                <div class="form-group"><label class="control-label">Demolabel</label>
+<input class="form-control" placeholder="Placeholder" name="BS3ActiveFormDemoModel[demo]" id="BS3ActiveFormDemoModel_demo" type="text" />
+
+</div>        </div>
+        <div class="col-md-6">
+            <div class="hl-code"><div class="php-hl-main"><pre><span class="php-hl-inlinetags">&lt;?=</span> <span class="php-hl-var">$form</span><span class="php-hl-code">-&gt;</span><span class="php-hl-identifier">group</span><span class="php-hl-brackets">(</span><span class="php-hl-quotes">'</span><span class="php-hl-string">textField</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,</span><span class="php-hl-var">$model</span><span class="php-hl-code">, </span><span class="php-hl-quotes">'</span><span class="php-hl-string">demo</span><span class="php-hl-quotes">'</span><span class="php-hl-code">, </span><span class="php-hl-reserved">array</span><span class="php-hl-brackets">(</span>
+    <span class="php-hl-quotes">'</span><span class="php-hl-string">inputOptions</span><span class="php-hl-quotes">'</span><span class="php-hl-code"> =&gt; </span><span class="php-hl-reserved">array</span><span class="php-hl-brackets">(</span>
+        <span class="php-hl-quotes">'</span><span class="php-hl-string">placeholder</span><span class="php-hl-quotes">'</span><span class="php-hl-code"> =&gt; </span><span class="php-hl-quotes">'</span><span class="php-hl-string">Placeholder</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,
+    </span><span class="php-hl-brackets">)</span><span class="php-hl-code">,
+</span><span class="php-hl-brackets">)</span><span class="php-hl-brackets">)</span> <span class="php-hl-inlinetags">?&gt;</span></pre></div></div>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2 id="disabled-label">Disabled Label</h2>
+    <div class="row">
+        <div class="col-md-6">
+                                <div class="form-group">
+<input class="form-control" placeholder="Demolabel" name="BS3ActiveFormDemoModel[demo]" id="BS3ActiveFormDemoModel_demo" type="text" />
+
+</div>        </div>
+        <div class="col-md-6">
+            <div class="hl-code"><div class="php-hl-main"><pre><span class="php-hl-inlinetags">&lt;?=</span> <span class="php-hl-var">$form</span><span class="php-hl-code">-&gt;</span><span class="php-hl-identifier">group</span><span class="php-hl-brackets">(</span><span class="php-hl-quotes">'</span><span class="php-hl-string">textField</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,</span><span class="php-hl-var">$model</span><span class="php-hl-code">, </span><span class="php-hl-quotes">'</span><span class="php-hl-string">demo</span><span class="php-hl-quotes">'</span><span class="php-hl-code">, </span><span class="php-hl-reserved">array</span><span class="php-hl-brackets">(</span>
+    <span class="php-hl-quotes">'</span><span class="php-hl-string">label</span><span class="php-hl-quotes">'</span><span class="php-hl-code"> =&gt; </span><span class="php-hl-reserved">false</span><span class="php-hl-code">,
+    </span><span class="php-hl-quotes">'</span><span class="php-hl-string">inputOptions</span><span class="php-hl-quotes">'</span><span class="php-hl-code"> =&gt; </span><span class="php-hl-reserved">array</span><span class="php-hl-brackets">(</span>
+        <span class="php-hl-quotes">'</span><span class="php-hl-string">placeholder</span><span class="php-hl-quotes">'</span><span class="php-hl-code"> =&gt; </span><span class="php-hl-var">$model</span><span class="php-hl-code">-&gt;</span><span class="php-hl-identifier">getAttributeLabel</span><span class="php-hl-brackets">(</span><span class="php-hl-quotes">'</span><span class="php-hl-string">demo</span><span class="php-hl-quotes">'</span><span class="php-hl-brackets">)</span><span class="php-hl-code">,
+    </span><span class="php-hl-brackets">)</span><span class="php-hl-code">,
+</span><span class="php-hl-brackets">)</span><span class="php-hl-brackets">)</span> <span class="php-hl-inlinetags">?&gt;</span></pre></div></div>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2 id="column-sizing">Column Sizing</h2>
+    <div class="row">
+        <div class="col-md-6">
+                                <div class="form-group"><label class="control-label">Demolabel</label> <div class="row"><div class="col-xs-4"><input class="form-control" name="BS3ActiveFormDemoModel[demo]" id="BS3ActiveFormDemoModel_demo" type="text" /></div></div></div>                <div class="form-group"><label class="control-label">Demolabel</label> <div class="row"><div class="col-xs-6"><input class="form-control" name="BS3ActiveFormDemoModel[demo]" id="BS3ActiveFormDemoModel_demo" type="text" /></div></div></div>                <div class="form-group"><label class="control-label">Demolabel</label> <div class="row"><div class="col-xs-8"><input class="form-control" name="BS3ActiveFormDemoModel[demo]" id="BS3ActiveFormDemoModel_demo" type="text" /></div></div></div>                <p>Error state:</p>
+                                <div class="form-group has-error"><label class="control-label">Demolabel</label> <div class="row"><div class="col-xs-4"><input class="form-control error" name="BS3ActiveFormDemoModel[demo]" id="BS3ActiveFormDemoModel_demo" type="text" /><p class="help-block">Demolabel cannot be blank.</p></div></div></div>        </div>
+        <div class="col-md-6">
+            <div class="hl-code"><div class="php-hl-main"><pre><span class="php-hl-inlinetags">&lt;?=</span> <span class="php-hl-var">$form</span><span class="php-hl-code">-&gt;</span><span class="php-hl-identifier">group</span><span class="php-hl-brackets">(</span><span class="php-hl-quotes">'</span><span class="php-hl-string">textField</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,</span><span class="php-hl-var">$model</span><span class="php-hl-code">, </span><span class="php-hl-quotes">'</span><span class="php-hl-string">demo</span><span class="php-hl-quotes">'</span><span class="php-hl-code">, </span><span class="php-hl-reserved">array</span><span class="php-hl-brackets">(</span>
+    <span class="php-hl-quotes">'</span><span class="php-hl-string">template</span><span class="php-hl-quotes">'</span><span class="php-hl-code"> =&gt; </span><span class="php-hl-quotes">'</span><span class="php-hl-string">{label} &lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-xs-4&quot;&gt;{input}{error}{help}&lt;/div&gt;&lt;/div&gt;</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,
+</span><span class="php-hl-brackets">)</span><span class="php-hl-brackets">)</span> <span class="php-hl-inlinetags">?&gt;</span><span class="php-hl-code">
+&lt;?= </span><span class="php-hl-var">$form</span><span class="php-hl-code">-&gt;</span><span class="php-hl-identifier">group</span><span class="php-hl-brackets">(</span><span class="php-hl-quotes">'</span><span class="php-hl-string">textField</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,</span><span class="php-hl-var">$model</span><span class="php-hl-code">, </span><span class="php-hl-quotes">'</span><span class="php-hl-string">demo</span><span class="php-hl-quotes">'</span><span class="php-hl-code">, </span><span class="php-hl-reserved">array</span><span class="php-hl-brackets">(</span>
+    <span class="php-hl-quotes">'</span><span class="php-hl-string">template</span><span class="php-hl-quotes">'</span><span class="php-hl-code"> =&gt; </span><span class="php-hl-quotes">'</span><span class="php-hl-string">{label} &lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-xs-6&quot;&gt;{input}{error}{help}&lt;/div&gt;&lt;/div&gt;</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,
+</span><span class="php-hl-brackets">)</span><span class="php-hl-brackets">)</span> <span class="php-hl-inlinetags">?&gt;</span><span class="php-hl-code">
+&lt;?= </span><span class="php-hl-var">$form</span><span class="php-hl-code">-&gt;</span><span class="php-hl-identifier">group</span><span class="php-hl-brackets">(</span><span class="php-hl-quotes">'</span><span class="php-hl-string">textField</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,</span><span class="php-hl-var">$model</span><span class="php-hl-code">, </span><span class="php-hl-quotes">'</span><span class="php-hl-string">demo</span><span class="php-hl-quotes">'</span><span class="php-hl-code">, </span><span class="php-hl-reserved">array</span><span class="php-hl-brackets">(</span>
+    <span class="php-hl-quotes">'</span><span class="php-hl-string">template</span><span class="php-hl-quotes">'</span><span class="php-hl-code"> =&gt; </span><span class="php-hl-quotes">'</span><span class="php-hl-string">{label} &lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-xs-8&quot;&gt;{input}{error}{help}&lt;/div&gt;&lt;/div&gt;</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,
+</span><span class="php-hl-brackets">)</span><span class="php-hl-brackets">)</span> <span class="php-hl-inlinetags">?&gt;</span></pre></div></div>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2 id="list-controls">List Controls</h2>
+    <div class="row">
+        <div class="col-md-6">
+                                <div class="form-group"><label class="control-label">Demolabel</label>
+<select class="form-control" name="BS3ActiveFormDemoModel[demo]" id="BS3ActiveFormDemoModel_demo">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select>
+
+</div>                <div class="form-group"><label>Demolabel</label>
+<input id="ytBS3ActiveFormDemoModel_demo" type="hidden" value="" name="BS3ActiveFormDemoModel[demo]" /><div class="checkbox">
+<label>
+<input id="BS3ActiveFormDemoModel_demo_0" value="1" type="checkbox" name="BS3ActiveFormDemoModel[demo][]" />
+1
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input id="BS3ActiveFormDemoModel_demo_1" value="2" type="checkbox" name="BS3ActiveFormDemoModel[demo][]" />
+2
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input id="BS3ActiveFormDemoModel_demo_2" value="3" type="checkbox" name="BS3ActiveFormDemoModel[demo][]" />
+3
+</label>
+</div>
+
+</div>                <div class="form-group"><label>Demolabel</label>
+<input id="ytBS3ActiveFormDemoModel_demo" type="hidden" value="" name="BS3ActiveFormDemoModel[demo]" /><div class="radio">
+<label>
+<input id="BS3ActiveFormDemoModel_demo_0" value="1" type="radio" name="BS3ActiveFormDemoModel[demo]" />
+1
+</label>
+</div>
+<div class="radio">
+<label>
+<input id="BS3ActiveFormDemoModel_demo_1" value="2" type="radio" name="BS3ActiveFormDemoModel[demo]" />
+2
+</label>
+</div>
+<div class="radio">
+<label>
+<input id="BS3ActiveFormDemoModel_demo_2" value="3" type="radio" name="BS3ActiveFormDemoModel[demo]" />
+3
+</label>
+</div>
+
+<p class="help-block">Help Text</p></div>        </div>
+
+        <div class="col-md-6">
+            <div class="hl-code"><div class="php-hl-main"><pre><span class="php-hl-inlinetags">&lt;?=</span> <span class="php-hl-var">$form</span><span class="php-hl-code">-&gt;</span><span class="php-hl-identifier">group</span><span class="php-hl-brackets">(</span><span class="php-hl-quotes">'</span><span class="php-hl-string">dropDownList</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,</span><span class="php-hl-var">$model</span><span class="php-hl-code">,</span><span class="php-hl-quotes">'</span><span class="php-hl-string">demo</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,</span><span class="php-hl-var">$opts</span><span class="php-hl-brackets">)</span> <span class="php-hl-inlinetags">?&gt;</span><span class="php-hl-code">
+&lt;?= </span><span class="php-hl-var">$form</span><span class="php-hl-code">-&gt;</span><span class="php-hl-identifier">group</span><span class="php-hl-brackets">(</span><span class="php-hl-quotes">'</span><span class="php-hl-string">checkBoxList</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,</span><span class="php-hl-var">$model</span><span class="php-hl-code">,</span><span class="php-hl-quotes">'</span><span class="php-hl-string">demo</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,</span><span class="php-hl-var">$opts</span><span class="php-hl-brackets">)</span> <span class="php-hl-inlinetags">?&gt;</span><span class="php-hl-code">
+&lt;?= </span><span class="php-hl-var">$form</span><span class="php-hl-code">-&gt;</span><span class="php-hl-identifier">group</span><span class="php-hl-brackets">(</span><span class="php-hl-quotes">'</span><span class="php-hl-string">radioButtonList</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,</span><span class="php-hl-var">$model</span><span class="php-hl-code">,</span><span class="php-hl-quotes">'</span><span class="php-hl-string">demo</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,</span><span class="php-hl-var">$opts</span><span class="php-hl-code">, </span><span class="php-hl-reserved">array</span><span class="php-hl-brackets">(</span>
+    <span class="php-hl-quotes">'</span><span class="php-hl-string">helpText</span><span class="php-hl-quotes">'</span><span class="php-hl-code"> =&gt; </span><span class="php-hl-quotes">'</span><span class="php-hl-string">Help Text</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,
+</span><span class="php-hl-brackets">)</span><span class="php-hl-brackets">)</span> <span class="php-hl-inlinetags">?&gt;</span></pre></div></div>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2 id="inline-lists">Inline Lists</h2>
+    <div class="row">
+        <div class="col-md-6">
+                <div class="form-group"><label>Demolabel</label>
+<div>
+<input id="ytBS3ActiveFormDemoModel_demo" type="hidden" value="" name="BS3ActiveFormDemoModel[demo]" /><label class="checkbox-inline">
+<input id="BS3ActiveFormDemoModel_demo_0" value="1" type="checkbox" name="BS3ActiveFormDemoModel[demo][]" />
+1
+</label>
+<label class="checkbox-inline">
+<input id="BS3ActiveFormDemoModel_demo_1" value="2" type="checkbox" name="BS3ActiveFormDemoModel[demo][]" />
+2
+</label>
+<label class="checkbox-inline">
+<input id="BS3ActiveFormDemoModel_demo_2" value="3" type="checkbox" name="BS3ActiveFormDemoModel[demo][]" />
+3
+</label>
+</div>
+
+</div>                <div class="form-group"><label>Demolabel</label>
+<div>
+<input id="ytBS3ActiveFormDemoModel_demo" type="hidden" value="" name="BS3ActiveFormDemoModel[demo]" /><label class="radio-inline">
+<input id="BS3ActiveFormDemoModel_demo_0" value="1" type="radio" name="BS3ActiveFormDemoModel[demo]" />
+1
+</label>
+<label class="radio-inline">
+<input id="BS3ActiveFormDemoModel_demo_1" value="2" type="radio" name="BS3ActiveFormDemoModel[demo]" />
+2
+</label>
+<label class="radio-inline">
+<input id="BS3ActiveFormDemoModel_demo_2" value="3" type="radio" name="BS3ActiveFormDemoModel[demo]" />
+3
+</label>
+</div>
+
+</div>        </div>
+
+        <div class="col-md-6">
+            <div class="hl-code"><div class="php-hl-main"><pre><span class="php-hl-inlinetags">&lt;?=</span> <span class="php-hl-var">$form</span><span class="php-hl-code">-&gt;</span><span class="php-hl-identifier">group</span><span class="php-hl-brackets">(</span><span class="php-hl-quotes">'</span><span class="php-hl-string">checkBoxList</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,</span><span class="php-hl-var">$model</span><span class="php-hl-code">,</span><span class="php-hl-quotes">'</span><span class="php-hl-string">demo</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,</span><span class="php-hl-var">$opts</span><span class="php-hl-code">, </span><span class="php-hl-reserved">array</span><span class="php-hl-brackets">(</span>
+    <span class="php-hl-quotes">'</span><span class="php-hl-string">inline</span><span class="php-hl-quotes">'</span><span class="php-hl-code"> =&gt; </span><span class="php-hl-reserved">true</span><span class="php-hl-code">,
+</span><span class="php-hl-brackets">)</span><span class="php-hl-brackets">)</span> <span class="php-hl-inlinetags">?&gt;</span><span class="php-hl-code">
+&lt;?= </span><span class="php-hl-var">$form</span><span class="php-hl-code">-&gt;</span><span class="php-hl-identifier">group</span><span class="php-hl-brackets">(</span><span class="php-hl-quotes">'</span><span class="php-hl-string">radioButtonList</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,</span><span class="php-hl-var">$model</span><span class="php-hl-code">,</span><span class="php-hl-quotes">'</span><span class="php-hl-string">demo</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,</span><span class="php-hl-var">$opts</span><span class="php-hl-code">, </span><span class="php-hl-reserved">array</span><span class="php-hl-brackets">(</span>
+    <span class="php-hl-quotes">'</span><span class="php-hl-string">inline</span><span class="php-hl-quotes">'</span><span class="php-hl-code"> =&gt; </span><span class="php-hl-reserved">true</span><span class="php-hl-code">,
+</span><span class="php-hl-brackets">)</span><span class="php-hl-brackets">)</span> <span class="php-hl-inlinetags">?&gt;</span></pre></div></div>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2 id="custom-inputs">Custom Inputs</h2>
+    <div class="row">
+        <div class="col-md-6">
+                                <div class="form-group"><label class="control-label">Demolabel</label>
+<div class="input-group"><span class="input-group-addon">@</span><input class="form-control" name="BS3ActiveFormDemoModel[demo]" id="BS3ActiveFormDemoModel_demo" type="text" /></div>
+
+</div>                <div class="form-group"><label class="control-label">Demolabel</label>
+<div class="input-group"><span class="input-group-addon">@</span><input class="form-control" name="BS3ActiveFormDemoModel[demo]" id="BS3ActiveFormDemoModel_demo" type="text" /><span class="input-group-addon">.00</span></div>
+
+</div>                <div class="form-group"><label class="control-label">Demolabel</label>
+<div class="input-group"><span class="input-group-addon"><input id="ytBS3ActiveFormDemoModel_demo" type="hidden" value="0" name="BS3ActiveFormDemoModel[demo]" /><input name="BS3ActiveFormDemoModel[demo]" id="BS3ActiveFormDemoModel_demo" value="1" type="checkbox" /></span><input class="form-control" name="BS3ActiveFormDemoModel[demo]" id="BS3ActiveFormDemoModel_demo" type="text" /></div>
+
+</div>                <div class="form-group"><label class="control-label">Demolabel</label>
+<div class="input-group"><span class="input-group-btn"><button class="btn btn-default">Go!</button></span><input class="form-control" name="BS3ActiveFormDemoModel[demo]" id="BS3ActiveFormDemoModel_demo" type="text" /></div>
+
+</div>                                <div class="form-group"><label class="control-label">Demolabel</label>
+<div class="input-group"><div class="input-group-btn"><button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button><ul class="dropdown-menu" id="yw2">
+<li><a href="#">Action</a></li>
+<li><a href="#">Another Action</a></li>
+<li class="divider"><span></span></li>
+<li><a href="#">Separated link</a></li>
+</ul></div><input class="form-control" name="BS3ActiveFormDemoModel[demo]" id="BS3ActiveFormDemoModel_demo" type="text" /></div>
+
+</div>                <div class="form-group"><label class="control-label">Demolabel</label>
+<div class="input-group"><div class="input-group-btn"><button class="btn btn-default">Action</button><button class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button><ul class="dropdown-menu" id="yw2">
+<li><a href="#">Action</a></li>
+<li><a href="#">Another Action</a></li>
+<li class="divider"><span></span></li>
+<li><a href="#">Separated link</a></li>
+</ul></div><input class="form-control" name="BS3ActiveFormDemoModel[demo]" id="BS3ActiveFormDemoModel_demo" type="text" /></div>
+
+</div>
+
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="hl-code"><div class="php-hl-main"><pre><span class="php-hl-inlinetags">&lt;?=</span> <span class="php-hl-var">$form</span><span class="php-hl-code">-&gt;</span><span class="php-hl-identifier">group</span><span class="php-hl-brackets">(</span><span class="php-hl-quotes">'</span><span class="php-hl-string">textField</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,</span><span class="php-hl-var">$model</span><span class="php-hl-code">,</span><span class="php-hl-quotes">'</span><span class="php-hl-string">demo</span><span class="php-hl-quotes">'</span><span class="php-hl-code">, </span><span class="php-hl-reserved">array</span><span class="php-hl-brackets">(</span>
+    <span class="php-hl-quotes">'</span><span class="php-hl-string">inputTemplate</span><span class="php-hl-quotes">'</span><span class="php-hl-code"> =&gt; </span><span class="php-hl-quotes">'</span><span class="php-hl-string">&lt;div class=&quot;input-group&quot;&gt;&lt;span class=&quot;input-group-addon&quot;&gt;@&lt;/span&gt;{input}&lt;/div&gt;</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,
+</span><span class="php-hl-brackets">)</span><span class="php-hl-brackets">)</span> <span class="php-hl-inlinetags">?&gt;</span><span class="php-hl-code">
+&lt;?= </span><span class="php-hl-var">$form</span><span class="php-hl-code">-&gt;</span><span class="php-hl-identifier">group</span><span class="php-hl-brackets">(</span><span class="php-hl-quotes">'</span><span class="php-hl-string">textField</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,</span><span class="php-hl-var">$model</span><span class="php-hl-code">,</span><span class="php-hl-quotes">'</span><span class="php-hl-string">demo</span><span class="php-hl-quotes">'</span><span class="php-hl-code">, </span><span class="php-hl-reserved">array</span><span class="php-hl-brackets">(</span>
+    <span class="php-hl-quotes">'</span><span class="php-hl-string">inputTemplate</span><span class="php-hl-quotes">'</span><span class="php-hl-code"> =&gt; </span><span class="php-hl-quotes">'</span><span class="php-hl-string">&lt;div class=&quot;input-group&quot;&gt;&lt;span class=&quot;input-group-addon&quot;&gt;@&lt;/span&gt;{input}</span><span class="php-hl-quotes">'</span><span class="php-hl-code">.
+        </span><span class="php-hl-quotes">'</span><span class="php-hl-string">&lt;span class=&quot;input-group-addon&quot;&gt;.00&lt;/span&gt;&lt;/div&gt;</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,
+</span><span class="php-hl-brackets">)</span><span class="php-hl-brackets">)</span> <span class="php-hl-inlinetags">?&gt;</span><span class="php-hl-code">
+&lt;?= </span><span class="php-hl-var">$form</span><span class="php-hl-code">-&gt;</span><span class="php-hl-identifier">group</span><span class="php-hl-brackets">(</span><span class="php-hl-quotes">'</span><span class="php-hl-string">textField</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,</span><span class="php-hl-var">$model</span><span class="php-hl-code">,</span><span class="php-hl-quotes">'</span><span class="php-hl-string">demo</span><span class="php-hl-quotes">'</span><span class="php-hl-code">, </span><span class="php-hl-reserved">array</span><span class="php-hl-brackets">(</span>
+    <span class="php-hl-quotes">'</span><span class="php-hl-string">inputTemplate</span><span class="php-hl-quotes">'</span><span class="php-hl-code"> =&gt; </span><span class="php-hl-quotes">'</span><span class="php-hl-string">&lt;div class=&quot;input-group&quot;&gt;&lt;span class=&quot;input-group-addon&quot;&gt;</span><span class="php-hl-quotes">'</span><span class="php-hl-code">.
+        </span><span class="php-hl-var">$form</span><span class="php-hl-code">-&gt;</span><span class="php-hl-identifier">checkBox</span><span class="php-hl-brackets">(</span><span class="php-hl-var">$model</span><span class="php-hl-code">, </span><span class="php-hl-quotes">'</span><span class="php-hl-string">demo</span><span class="php-hl-quotes">'</span><span class="php-hl-brackets">)</span><span class="php-hl-code">.</span><span class="php-hl-quotes">'</span><span class="php-hl-string">&lt;/span&gt;{input}&lt;/div&gt;</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,
+</span><span class="php-hl-brackets">)</span><span class="php-hl-brackets">)</span> <span class="php-hl-inlinetags">?&gt;</span><span class="php-hl-code">
+&lt;?= </span><span class="php-hl-var">$form</span><span class="php-hl-code">-&gt;</span><span class="php-hl-identifier">group</span><span class="php-hl-brackets">(</span><span class="php-hl-quotes">'</span><span class="php-hl-string">textField</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,</span><span class="php-hl-var">$model</span><span class="php-hl-code">,</span><span class="php-hl-quotes">'</span><span class="php-hl-string">demo</span><span class="php-hl-quotes">'</span><span class="php-hl-code">, </span><span class="php-hl-reserved">array</span><span class="php-hl-brackets">(</span>
+    <span class="php-hl-quotes">'</span><span class="php-hl-string">inputTemplate</span><span class="php-hl-quotes">'</span><span class="php-hl-code"> =&gt; </span><span class="php-hl-quotes">'</span><span class="php-hl-string">&lt;div class=&quot;input-group&quot;&gt;&lt;span class=&quot;input-group-btn&quot;&gt;</span><span class="php-hl-quotes">'</span><span class="php-hl-code">.
+        </span><span class="php-hl-quotes">'</span><span class="php-hl-string">&lt;button class=&quot;btn btn-default&quot;&gt;Go!&lt;/button&gt;&lt;/span&gt;{input}&lt;/div&gt;</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,
+</span><span class="php-hl-brackets">)</span><span class="php-hl-brackets">)</span> <span class="php-hl-inlinetags">?&gt;</span><span class="php-hl-code">
+&lt;?</span><span class="php-hl-identifier">php</span> <span class="php-hl-var">$menu</span><span class="php-hl-code"> = </span><span class="php-hl-var">$this</span><span class="php-hl-code">-&gt;</span><span class="php-hl-identifier">widget</span><span class="php-hl-brackets">(</span><span class="php-hl-quotes">'</span><span class="php-hl-string">zii.widgets.CMenu</span><span class="php-hl-quotes">'</span><span class="php-hl-code">, </span><span class="php-hl-reserved">array</span><span class="php-hl-brackets">(</span>
+    <span class="php-hl-quotes">'</span><span class="php-hl-string">htmlOptions</span><span class="php-hl-quotes">'</span><span class="php-hl-code"> =&gt; </span><span class="php-hl-reserved">array</span><span class="php-hl-brackets">(</span><span class="php-hl-quotes">'</span><span class="php-hl-string">class</span><span class="php-hl-quotes">'</span><span class="php-hl-code">=&gt;</span><span class="php-hl-quotes">'</span><span class="php-hl-string">dropdown-menu</span><span class="php-hl-quotes">'</span><span class="php-hl-brackets">)</span><span class="php-hl-code">,
+    </span><span class="php-hl-quotes">'</span><span class="php-hl-string">items</span><span class="php-hl-quotes">'</span><span class="php-hl-code"> =&gt; </span><span class="php-hl-reserved">array</span><span class="php-hl-brackets">(</span>
+        <span class="php-hl-reserved">array</span><span class="php-hl-brackets">(</span><span class="php-hl-quotes">'</span><span class="php-hl-string">label</span><span class="php-hl-quotes">'</span><span class="php-hl-code">=&gt;</span><span class="php-hl-quotes">'</span><span class="php-hl-string">Action</span><span class="php-hl-quotes">'</span><span class="php-hl-code">, </span><span class="php-hl-quotes">'</span><span class="php-hl-string">url</span><span class="php-hl-quotes">'</span><span class="php-hl-code">=&gt;</span><span class="php-hl-quotes">'</span><span class="php-hl-string">#</span><span class="php-hl-quotes">'</span><span class="php-hl-brackets">)</span><span class="php-hl-code">,
+        </span><span class="php-hl-reserved">array</span><span class="php-hl-brackets">(</span><span class="php-hl-quotes">'</span><span class="php-hl-string">label</span><span class="php-hl-quotes">'</span><span class="php-hl-code">=&gt;</span><span class="php-hl-quotes">'</span><span class="php-hl-string">Another Action</span><span class="php-hl-quotes">'</span><span class="php-hl-code">, </span><span class="php-hl-quotes">'</span><span class="php-hl-string">url</span><span class="php-hl-quotes">'</span><span class="php-hl-code"> =&gt;</span><span class="php-hl-quotes">'</span><span class="php-hl-string">#</span><span class="php-hl-quotes">'</span><span class="php-hl-brackets">)</span><span class="php-hl-code">,
+        </span><span class="php-hl-reserved">array</span><span class="php-hl-brackets">(</span><span class="php-hl-quotes">'</span><span class="php-hl-string">itemOptions</span><span class="php-hl-quotes">'</span><span class="php-hl-code">=&gt;</span><span class="php-hl-reserved">array</span><span class="php-hl-brackets">(</span><span class="php-hl-quotes">'</span><span class="php-hl-string">class</span><span class="php-hl-quotes">'</span><span class="php-hl-code">=&gt;</span><span class="php-hl-quotes">'</span><span class="php-hl-string">divider</span><span class="php-hl-quotes">'</span><span class="php-hl-brackets">)</span><span class="php-hl-brackets">)</span><span class="php-hl-code">,
+        </span><span class="php-hl-reserved">array</span><span class="php-hl-brackets">(</span><span class="php-hl-quotes">'</span><span class="php-hl-string">label</span><span class="php-hl-quotes">'</span><span class="php-hl-code">=&gt;</span><span class="php-hl-quotes">'</span><span class="php-hl-string">Separated link</span><span class="php-hl-quotes">'</span><span class="php-hl-code">, </span><span class="php-hl-quotes">'</span><span class="php-hl-string">url</span><span class="php-hl-quotes">'</span><span class="php-hl-code">=&gt;</span><span class="php-hl-quotes">'</span><span class="php-hl-string">#</span><span class="php-hl-quotes">'</span><span class="php-hl-brackets">)</span><span class="php-hl-code">,
+    </span><span class="php-hl-brackets">)</span><span class="php-hl-code">,
+</span><span class="php-hl-brackets">)</span><span class="php-hl-code">, </span><span class="php-hl-reserved">true</span><span class="php-hl-brackets">)</span><span class="php-hl-code">; </span><span class="php-hl-inlinetags">?&gt;</span><span class="php-hl-code">
+&lt;?= </span><span class="php-hl-var">$form</span><span class="php-hl-code">-&gt;</span><span class="php-hl-identifier">group</span><span class="php-hl-brackets">(</span><span class="php-hl-quotes">'</span><span class="php-hl-string">textField</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,</span><span class="php-hl-var">$model</span><span class="php-hl-code">,</span><span class="php-hl-quotes">'</span><span class="php-hl-string">demo</span><span class="php-hl-quotes">'</span><span class="php-hl-code">, </span><span class="php-hl-reserved">array</span><span class="php-hl-brackets">(</span>
+    <span class="php-hl-quotes">'</span><span class="php-hl-string">inputTemplate</span><span class="php-hl-quotes">'</span><span class="php-hl-code"> =&gt; </span><span class="php-hl-quotes">'</span><span class="php-hl-string">&lt;div class=&quot;input-group&quot;&gt;&lt;div class=&quot;input-group-btn&quot;&gt;</span><span class="php-hl-quotes">'</span><span class="php-hl-code">.
+        </span><span class="php-hl-quotes">'</span><span class="php-hl-string">&lt;button class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;Action </span><span class="php-hl-quotes">'</span><span class="php-hl-code">.
+        </span><span class="php-hl-quotes">'</span><span class="php-hl-string">&lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;</span><span class="php-hl-quotes">'</span><span class="php-hl-code">.</span><span class="php-hl-var">$menu</span><span class="php-hl-code">.</span><span class="php-hl-quotes">'</span><span class="php-hl-string">&lt;/div&gt;{input}&lt;/div&gt;</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,
+</span><span class="php-hl-brackets">)</span><span class="php-hl-brackets">)</span> <span class="php-hl-inlinetags">?&gt;</span><span class="php-hl-code">
+&lt;?= </span><span class="php-hl-var">$form</span><span class="php-hl-code">-&gt;</span><span class="php-hl-identifier">group</span><span class="php-hl-brackets">(</span><span class="php-hl-quotes">'</span><span class="php-hl-string">textField</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,</span><span class="php-hl-var">$model</span><span class="php-hl-code">,</span><span class="php-hl-quotes">'</span><span class="php-hl-string">demo</span><span class="php-hl-quotes">'</span><span class="php-hl-code">, </span><span class="php-hl-reserved">array</span><span class="php-hl-brackets">(</span>
+    <span class="php-hl-quotes">'</span><span class="php-hl-string">inputTemplate</span><span class="php-hl-quotes">'</span><span class="php-hl-code"> =&gt; </span><span class="php-hl-quotes">'</span><span class="php-hl-string">&lt;div class=&quot;input-group&quot;&gt;&lt;div class=&quot;input-group-btn&quot;&gt;</span><span class="php-hl-quotes">'</span><span class="php-hl-code">.
+        </span><span class="php-hl-quotes">'</span><span class="php-hl-string">&lt;button class=&quot;btn btn-default&quot;&gt;Action&lt;/button&gt;</span><span class="php-hl-quotes">'</span><span class="php-hl-code">.
+        </span><span class="php-hl-quotes">'</span><span class="php-hl-string">&lt;button class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;</span><span class="php-hl-quotes">'</span><span class="php-hl-code">.
+        </span><span class="php-hl-quotes">'</span><span class="php-hl-string">&lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;</span><span class="php-hl-quotes">'</span><span class="php-hl-code">.</span><span class="php-hl-var">$menu</span><span class="php-hl-code">.</span><span class="php-hl-quotes">'</span><span class="php-hl-string">&lt;/div&gt;{input}&lt;/div&gt;</span><span class="php-hl-quotes">'</span><span class="php-hl-code">,
+</span><span class="php-hl-brackets">)</span><span class="php-hl-brackets">)</span> <span class="php-hl-inlinetags">?&gt;</span></pre></div></div>
+        </div>
+    </div>
+
+</form>    </div>
+</div>
+
+    </div>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</body>
+</html>
