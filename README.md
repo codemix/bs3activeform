@@ -3,14 +3,22 @@ BS3ActiveForm
 
 # Installation
 
-We recommend to install with composer. Then you can use the class with:
+We recommend to install this class with composer. If you included the
+composer autoloader you can use the class right away.
+
+# Documentation
+
+For the documentation please head over to our GitHub page
+
+[http://codemix.github.io/bs3activeform/](http://codemix.github.io/bs3activeform/)
+
+The source code of the docs is included as module. You can configure
+it locally in your `main.php`:
 
 ```php
-use Codemix\BS3ActiveForm;
-```
-
-If you installed the package manually you can include the class with:
-
-```php
-use application.extensions.bs3activeform.src.Codemix.BS3ActiveForm;
+'modules' => array(
+    'bs3activeform' => array(
+        'class' => 'vendor.codemix.bs3activeform.demo.BS3ActiveFormDemoModule',
+    ),
+),
 ```
