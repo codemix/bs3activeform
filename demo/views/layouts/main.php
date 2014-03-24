@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 $cs = Yii::app()->clientScript;
-$cs->registerCoreScript('jquery');
+$cs->registerScriptFile('//code.jquery.com/jquery-1.8.3.min.js', CClientScript::POS_END);
 $cs->registerScriptFile('//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js',CClientScript::POS_END);
 ?>
 <html lang="en">
